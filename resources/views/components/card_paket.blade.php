@@ -1,9 +1,9 @@
-<section class="py-16 bg-gray-50">
+<section class="py-16 bg-white">
     <div class="container mx-auto">
         <!-- Section Title -->
         <div class="text-center mb-10">
-            <h2 class="text-3xl font-bold text-black">Jadwal Program Umroh</h2>
-            <img src="/assets/images/element.png" alt="element" class="mx-auto mb-10">
+            <h2 class="text-4xl font-bold text-black font-elmessiri">Jadwal Program Umroh</h2>
+            <img src="/assets/images/element.png" alt="element" class="mx-auto mb-10 pt-5">
         </div>
 
         <!-- Card List -->
@@ -11,9 +11,10 @@
             @foreach ($packages as $package)
                 <!-- Single Card -->
                 <div class="bg-white shadow-md rounded-lg overflow-hidden">
+                    <img src="{{ $package['foto_paket'] }}" alt="{{ $package['nama_paket'] }}" class="w-full h-45 object-cover">
                     <!-- Header -->
                     <div class="p-4">
-                        <h3 class="text-xl font-bold text-gray-800">{{ $package['nama_paket'] }}</h3>
+                        <h3 class="text-2xl font-bold text-gray-800 font-elmessiri">{{ $package['nama_paket'] }}</h3>
                         <p class="text-sm text-gray-600 mt-2">{{ $package['tanggal'] }}</p>
                     </div>
 
@@ -25,8 +26,24 @@
                         </div>
                         <hr>
                         <div class="mt-4">
-                            <p class="text-sm text-gray-600">Hotel Madinah: {{ $package['hotel_madinah'] }}</p>
-                            <p class="text-sm text-gray-600">Hotel Makkah: {{ $package['hotel_makkah'] }}</p>
+                            <!-- Hotel Madinah -->
+                            <div class="flex items-center justify-between">
+                                <p class="text-sm text-gray-600">Hotel Madinah: {{ $package['hotel_madinah'] }}</p>
+                                <div class="flex items-center">
+                                    @for ($i = 0; $i < $package['rating_madinah']; $i++)
+                                        <img src="/assets/images/star.png" alt="Star" class="h-4 w-4">
+                                    @endfor
+                                </div>
+                            </div>
+                            <!-- Hotel Makkah -->
+                            <div class="flex items-center justify-between mt-2">
+                                <p class="text-sm text-gray-600">Hotel Makkah: {{ $package['hotel_makkah'] }}</p>
+                                <div class="flex items-center">
+                                    @for ($i = 0; $i < $package['rating_makkah']; $i++)
+                                        <img src="/assets/images/star.png" alt="Star" class="h-4 w-4">
+                                    @endfor
+                                </div>
+                            </div>
                         </div>
                     </div>
 
@@ -36,11 +53,14 @@
                             <!-- Airline Logo -->
                             <div class="flex items-center">
                                 @if ($package['pesawat'] == 'Lion Air')
-                                    <img src="/assets/images/lion-air.png" alt="Lion Air" class="h-6">
-                                @else
-                                    <img src="/assets/images/default-airline.png" alt="Default Airline" class="h-6">
+                                    <img src="/assets/images/lion_air.png" alt="Lion Air" class="h-10 w-auto">
+                                @elseif ($package['pesawat'] == 'Citilink')
+                                    <img src="/assets/images/citilink.png" alt="Citilink" class="h-10 w-auto">
+                                @elseif ($package['pesawat'] == 'Garuda Indonesia')
+                                    <img src="/assets/images/garuda.png" alt="Citilink" class="h-10 w-auto">
+                                @elseif ($package['pesawat'] == 'Emirates')
+                                    <img src="/assets/images/emirates.png" alt="Citilink" class="h-10 w-auto">
                                 @endif
-                                <span class="ml-2 text-sm text-gray-800">{{ $package['pesawat'] }}</span>
                             </div>
                             <!-- Price -->
                             <div class="text-right">

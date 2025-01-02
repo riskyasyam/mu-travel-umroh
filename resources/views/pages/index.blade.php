@@ -7,4 +7,8 @@
     @include('components.welcome')
     @include('components.profile')
     @include('components.poin')
+    @isset($packages)
+    @include('components.card_paket', ['packages' => $packages])
+    @endisset
+    @include('components.dokumentasi')
 @endsection
