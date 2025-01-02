@@ -10,8 +10,15 @@ export default {
     theme: {
         extend: {
             fontFamily: {
-                sans: ['Figtree', ...defaultTheme.fontFamily.sans],
+                sans: ['Poppins', ...defaultTheme.fontFamily.sans],
+                petrona: ['Petrona', 'serif'],
+                montserrat: ['Montserrat', 'sans-serif'],
+                elmessiri: ['ElMessiri', 'serif'],
             },
+            colors: {
+                gradientStart: '#D58E31',
+                gradientEnd: '#EBCB4D',
+            }
         },
     },
     plugins: [],
