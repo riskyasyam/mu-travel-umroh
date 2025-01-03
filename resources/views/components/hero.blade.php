@@ -18,7 +18,7 @@
             PT MUKHTARA INDONESIA UTAMA PPIU No. 91201044207990001 / 2024
         </p>
         <!-- Button -->
-        <a href="https://wa.me/081234550234" class="bg-yellow-500 text-black py-3 px-6 rounded-lg flex items-center space-x-2 hover:bg-yellow-600">
+        <a href="https://wa.me/081234550234" class="bg-gradient-to-r from-gradientStart to-gradientEnd text-black py-3 px-6 rounded-lg flex items-center space-x-2 hover:bg-yellow-600">
             <img src="assets/images/whatsapp.png" alt="WhatsApp" class="h-5">
             <span>Pesan Paket</span>
         </a>

@@ -11,4 +11,5 @@
     @include('components.card_paket', ['packages' => $packages])
     @endisset
     @include('components.dokumentasi')
+    @include('components.rekening')
 @endsection
