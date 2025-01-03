@@ -16,6 +16,6 @@
             <li><a href="#" class="hover:text-gray-300 font-montserrat">Kemitraan</a></li>
         </ul>
         <!-- Button Login -->
-        <a href="#" class="bg-gradient-to-r from-gradientStart to-gradientEnd text-black py-2 px-7 rounded-2xl hover:bg-yellow-600 font-poppins font-semibold">Login</a>
+        <a href="{{ route('login') }}" class="bg-gradient-to-r from-gradientStart to-gradientEnd text-black py-2 px-7 rounded-2xl hover:bg-yellow-600 font-poppins font-semibold">Login</a>
     </div>
 </nav>

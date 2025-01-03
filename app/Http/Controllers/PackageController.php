@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Package;
 use Illuminate\Http\Request;
 
 class PackageController extends Controller
@@ -11,60 +12,7 @@ class PackageController extends Controller
      */
     public function index()
     {
-        $packages = [
-            [
-                'nama_paket' => 'Umroh 9 Hari',
-                'foto_paket' => '/assets/images/paket_img.png',
-                'tanggal' => '14 Agustus 2024',
-                'durasi' => '9 Hari',
-                'sisa_kursi' => '10 Kursi',
-                'hotel_madinah' => 'Lutfi, Final Rehab, Materi Jiwar',
-                'hotel_makkah' => 'Grand Zowar',
-                'pesawat' => 'Lion Air',
-                'harga' => 'Rp27.000.000',
-                'rating_makkah' => 5,
-                'rating_madinah' => 5
-            ],
-            [
-                'nama_paket' => 'Umroh 16 Hari',
-                'foto_paket' => '/assets/images/paket_img.png',
-                'tanggal' => '15 September 2024',
-                'durasi' => '16 Hari',
-                'sisa_kursi' => '20 Kursi',
-                'hotel_madinah' => 'Lutfi, Final Rehab, Materi Jiwar',
-                'hotel_makkah' => 'Grand Zowar',
-                'pesawat' => 'Citilink',
-                'harga' => 'Rp31.000.000',
-                'rating_makkah' => 5,
-                'rating_madinah' => 5,
-            ],
-            [
-                'nama_paket' => 'Umroh 12 Hari',
-                'foto_paket' => '/assets/images/paket_img.png',
-                'tanggal' => '10 Januari 2025',
-                'durasi' => '12 Hari',
-                'sisa_kursi' => '10 Kursi',
-                'hotel_madinah' => 'Lutfi, Final Rehab, Materi Jiwar',
-                'hotel_makkah' => 'Grand Zowar',
-                'pesawat' => 'Emirates',
-                'harga' => 'Rp29.000.000',
-                'rating_makkah' => 5,
-                'rating_madinah' => 5
-            ],
-            [
-                'nama_paket' => 'Umroh 12 Hari',
-                'foto_paket' => '/assets/images/paket_img.png',
-                'tanggal' => '10 Januari 2025',
-                'durasi' => '12 Hari',
-                'sisa_kursi' => '10 Kursi',
-                'hotel_madinah' => 'Lutfi, Final Rehab, Materi Jiwar',
-                'hotel_makkah' => 'Grand Zowar',
-                'pesawat' => 'Emirates',
-                'harga' => 'Rp29.000.000',
-                'rating_makkah' => 5,
-                'rating_madinah' => 5
-            ],
-        ];
+        $packages = Package::all();
         return view('pages.index', compact('packages'));
     }
 

@@ -15,14 +15,14 @@
                     <!-- Header -->
                     <div class="p-4">
                         <h3 class="text-2xl font-bold text-gray-800 font-elmessiri">{{ $package['nama_paket'] }}</h3>
-                        <p class="text-sm text-gray-600 mt-2">{{ $package['tanggal'] }}</p>
+                        <p class="text-sm text-gray-600 mt-2">{{ \Carbon\Carbon::parse($package->tanggal)->translatedFormat('d F Y') }}</p>
                     </div>
 
                     <!-- Details -->
                     <div class="p-4 border-t">
                         <div class="flex justify-between mb-2">
-                            <span class="text-sm bg-gray-100 rounded-lg px-3 py-1">{{ $package['durasi'] }}</span>
-                            <span class="text-sm bg-gray-100 rounded-lg px-3 py-1">{{ $package['sisa_kursi'] }}</span>
+                            <span class="text-sm bg-gray-100 rounded-lg px-3 py-1">{{ $package['durasi'] }} Hari</span>
+                            <span class="text-sm bg-gray-100 rounded-lg px-3 py-1">{{ $package['sisa_kursi'] }} Kursi</span>
                         </div>
                         <hr>
                         <div class="mt-4">
@@ -65,7 +65,7 @@
                             <!-- Price -->
                             <div class="text-right">
                                 <p class="text-sm text-gray-600">Harga Mulai:</p>
-                                <p class="text-lg font-bold text-black">{{ $package['harga'] }}</p>
+                                <p class="text-lg font-bold text-black">Rp{{ number_format($package->harga, 0, ',', '.') }}</p>
                             </div>
                         </div>
                         <!-- Booking Button -->

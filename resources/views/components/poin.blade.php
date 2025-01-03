@@ -11,10 +11,10 @@
             <div class="bg-white rounded-lg shadow-lg p-6">
                 <div class="flex items-center mb-4">
                     <img src="/assets/images/logo.png" alt="Icon" class="w-12 h-12 mr-4">
-                    <h3 class="text-xl font-semibold text-gray-800">Pelayanan Ramah</h3>
+                    <h3 class="text-xl font-semibold text-gray-800">Aman Terpercaya</h3>
                 </div>
                 <p class="text-gray-600">
-                    Pelayanan yang kami berikan selalu maksimal dengan mengedepankan kenyamanan dan keamanan jamaah.
+                    Aman dan terpercaya dengan ribuan jamaah yang sudah berangkat dengan staff yang berpengalaman.
                 </p>
             </div>
 
@@ -22,10 +22,10 @@
             <div class="bg-white rounded-lg shadow-lg p-6">
                 <div class="flex items-center mb-4">
                     <img src="/assets/images/logo.png" alt="Icon" class="w-12 h-12 mr-4">
-                    <h3 class="text-xl font-semibold text-gray-800">Pelayanan Ramah</h3>
+                    <h3 class="text-xl font-semibold text-gray-800">Pembayaran Fleksibel</h3>
                 </div>
                 <p class="text-gray-600">
-                    Pelayanan yang kami berikan selalu maksimal dengan mengedepankan kenyamanan dan keamanan jamaah.
+                    Bisa pembayaran CASH, UMROH DULU BAYAR BELAKANGAN, bahkan COD!
                 </p>
             </div>
 
@@ -33,10 +33,10 @@
             <div class="bg-white rounded-lg shadow-lg p-6">
                 <div class="flex items-center mb-4">
                     <img src="/assets/images/logo.png" alt="Icon" class="w-12 h-12 mr-4">
-                    <h3 class="text-xl font-semibold text-gray-800">Pelayanan Ramah</h3>
+                    <h3 class="text-xl font-semibold text-gray-800">Cicilan 2 Juta!</h3>
                 </div>
                 <p class="text-gray-600">
-                    Pelayanan yang kami berikan selalu maksimal dengan mengedepankan kenyamanan dan keamanan jamaah.
+                    Cicilan mulai Rp 2 Juta saja, sudah termasuk biaya paket umroh!
                 </p>
             </div>
         </div>
@@ -47,10 +47,10 @@
             <div class="bg-white rounded-lg shadow-lg p-6">
                 <div class="flex items-center mb-4">
                     <img src="/assets/images/logo.png" alt="Icon" class="w-12 h-12 mr-4">
-                    <h3 class="text-xl font-semibold text-gray-800">Pelayanan Ramah</h3>
+                    <h3 class="text-xl font-semibold text-gray-800">Nyaman Banget</h3>
                 </div>
                 <p class="text-gray-600">
-                    Pelayanan yang kami berikan selalu maksimal dengan mengedepankan kenyamanan dan keamanan jamaah.
+                    Bersama ribuan jamaah lain, perjalanan ibadah Anda jadi lebih nyaman
                 </p>
             </div>
 
@@ -58,10 +58,10 @@
             <div class="bg-white rounded-lg shadow-lg p-6">
                 <div class="flex items-center mb-4">
                     <img src="/assets/images/logo.png" alt="Icon" class="w-12 h-12 mr-4">
-                    <h3 class="text-xl font-semibold text-gray-800">Pelayanan Ramah</h3>
+                    <h3 class="text-xl font-semibold text-gray-800">Bonus Eksklusif</h3>
                 </div>
                 <p class="text-gray-600">
-                    Pelayanan yang kami berikan selalu maksimal dengan mengedepankan kenyamanan dan keamanan jamaah.
+                    Bonus perlengkapan eksklusif seperti 2 koper dan perlengkapan ibadah lainnya
                 </p>
             </div>
 
