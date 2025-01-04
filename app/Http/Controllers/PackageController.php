@@ -16,6 +16,11 @@ class PackageController extends Controller
         return view('pages.index', compact('packages'));
     }
 
+    public function tampil()
+    {
+        return view('admin.paket');
+    }
+
     /**
      * Show the form for creating a new resource.
      */

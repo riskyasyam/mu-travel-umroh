@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\AdminController;
+use App\Http\Controllers\DokumentasiController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\PackageController;
 use Illuminate\Support\Facades\Route;
@@ -20,6 +22,12 @@ Route::post('login',[LoginController::class, 'login']);
 
 Route::post('/logout', [LoginController::class, 'logout'])->name('logout');
 
-Route::get('/dashboard', function(){
-    return 'Welcome to the dashboard';
-})->middleware('auth');
+Route::middleware(['auth'])->group(function(){
+    Route::get('/dashboard', [AdminController::class, 'index'])->name('admin.dashboard');
+});
+
+Route::prefix('admin')->middleware(['auth'])->group(function(){
+    Route::get('/dashboard', [AdminController::class, 'index'])->name('admin.dashboard');
+    Route::get('/paket', [PackageController::class, 'tampil'])->name('admin.paket');
+    Route::get('/dokumentasi', [DokumentasiController::class, 'index'])->name('admin.dokumentasi');
+});

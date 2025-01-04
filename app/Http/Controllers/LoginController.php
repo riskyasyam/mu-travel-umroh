@@ -19,7 +19,7 @@ class LoginController extends Controller
         ]);
         
         if(Auth::attempt($request->only('email', 'password'))) {
-            return redirect()->intended('/dashboard');
+            return redirect()->intended('/admin/dashboard');
         }
 
         return back()->withErrors(['email' => 'Invalid credentials']);
