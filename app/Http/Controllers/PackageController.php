@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Package;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class PackageController extends Controller
 {
@@ -18,7 +19,8 @@ class PackageController extends Controller
 
     public function tampil()
     {
-        return view('admin.paket');
+        $packages = DB::table('packages')->get();
+        return view('admin.paket', compact('packages'));
     }
 
     /**
@@ -26,7 +28,7 @@ class PackageController extends Controller
      */
     public function create()
     {
-        //
+        return view('admin.paket.create');
     }
 
     /**
@@ -34,7 +36,22 @@ class PackageController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $packages = new Package();
+        $packages->nama_paket = $request->input('nama_paket');
+        $packages->foto_paket = $request->input('foto_paket');
+        $packages->description = $request->input('description');
+        $packages->harga = $request->input('harga');
+        $packages->durasi = $request->input('durasi');
+        $packages->tanggal = $request->input('tanggal');
+        $packages->sisa_kursi = $request->input('sisa_kursi');
+        $packages->hotel_madinah = $request->input('hotel_madinah');
+        $packages->hotel_makkah = $request->input('hotel_makkah');
+        $packages->pesawat = $request->input('pesawat');
+        $packages->rating_makkah = $request->input('rating_makkah');
+        $packages->rating_madinah = $request->input('rating_madinah');
+        $packages->save();
+
+        return redirect()->route('admin.paket')->with('success', 'Paket berhasil ditambahkan.');
     }
 
     /**
@@ -50,7 +67,7 @@ class PackageController extends Controller
      */
     public function edit(string $id)
     {
-        //
+        return view('admin.paket.edit');
     }
 
     /**
@@ -66,6 +83,14 @@ class PackageController extends Controller
      */
     public function destroy(string $id)
     {
-        //
+        $package = Package::find($id);
+
+        if (!$package) {
+            return redirect()->route('admin.paket')->with('error', 'Paket tidak ditemukan.');
+        }
+
+        $package->delete();
+
+        return redirect()->route('admin.paket')->with('success', 'Paket berhasil dihapus.');
     }
 }
