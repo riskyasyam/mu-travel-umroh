@@ -30,7 +30,7 @@
                             <td class="border border-gray-300 px-4 py-2">{{ $package->nama_paket }}</td>
                             <td class="border border-gray-300 px-4 py-2">{{ $package->tanggal }}</td>
                             <td class="border border-gray-300 px-4 py-2">{{ $package->sisa_kursi }}</td>
-                            <td class="border border-gray-300 px-4 py-2">{{ $package->harga }}</td>
+                            <td class="border border-gray-300 px-4 py-2">{{ number_format($package->harga, 0, ',', '.') }}</td>
                             <td class="border border-gray-300 px-4 py-2">{{ $package->durasi }}</td>
                             <td class="border border-gray-300 px-4 py-2">{{ $package->pesawat }}</td>
                             <td class="border border-gray-300 px-4 py-2">{{ $package->hotel_makkah }}</td>

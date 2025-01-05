@@ -34,4 +34,5 @@ Route::prefix('admin')->middleware(['auth'])->group(function(){
     Route::get('/paket/create', [PackageController::class, 'create'])->name('admin.paket.create');
     Route::delete('/admin/paket/{id}/destroy', [PackageController::class, 'destroy'])->name('admin.paket.destroy');
     Route::post('/paket/create/store', [PackageController::class, 'store'])->name('admin.paket.create.store');
+    Route::put('/paket/{id}/update', [PackageController::class, 'update'])->name('admin.paket.update');
 });

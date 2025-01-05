@@ -36,11 +36,31 @@ class PackageController extends Controller
      */
     public function store(Request $request)
     {
+        // Validasi input termasuk file gambar
+        $request->validate([
+            'nama_paket' => 'required|string|max:255',
+            'foto_paket' => 'required|image|mimes:jpeg,png,jpg,gif|max:2048',
+            'description' => 'required|string',
+            'harga' => 'required|numeric',
+            'durasi' => 'required|integer',
+            'tanggal' => 'required|date',
+            'sisa_kursi' => 'required|integer',
+            'hotel_madinah' => 'required|string|max:255',
+            'hotel_makkah' => 'required|string|max:255',
+            'pesawat' => 'required|string|max:255',
+            'rating_makkah' => 'required|numeric|min:0|max:5',
+            'rating_madinah' => 'required|numeric|min:0|max:5',
+        ]);
+
+        // Simpan gambar ke folder 'paket_umroh' dalam penyimpanan public
+        $fotoPath = $request->file('foto_paket')->store('paket_umroh', 'public');
+
+        // Simpan data ke database
         $packages = new Package();
         $packages->nama_paket = $request->input('nama_paket');
-        $packages->foto_paket = $request->input('foto_paket');
+        $packages->foto_paket = $fotoPath; // Simpan path gambar
         $packages->description = $request->input('description');
-        $packages->harga = $request->input('harga');
+        $packages->harga = str_replace('.', '', $request->input('harga'));
         $packages->durasi = $request->input('durasi');
         $packages->tanggal = $request->input('tanggal');
         $packages->sisa_kursi = $request->input('sisa_kursi');
@@ -51,7 +71,7 @@ class PackageController extends Controller
         $packages->rating_madinah = $request->input('rating_madinah');
         $packages->save();
 
-        return redirect()->route('admin.paket')->with('success', 'Paket berhasil ditambahkan.');
+        return redirect()->route('admin.paket.create')->with('success', 'Paket berhasil ditambahkan.');
     }
 
     /**
@@ -67,7 +87,8 @@ class PackageController extends Controller
      */
     public function edit(string $id)
     {
-        return view('admin.paket.edit');
+        $package = Package::findOrFail($id);
+        return view('admin.paket.edit', compact('package'));
     }
 
     /**
@@ -75,7 +96,25 @@ class PackageController extends Controller
      */
     public function update(Request $request, string $id)
     {
-        //
+        $package = Package::findOrFail($id);
+
+        $request->validate([
+            'nama_paket' => 'required|string|max:255',
+            'description' => 'required|string',
+            'harga' => 'required|numeric',
+            'durasi' => 'required|integer',
+            'tanggal' => 'required|date',
+            'hotel_madinah' => 'required|string|max:255',
+            'rating_madinah' => 'required|numeric|min:0|max:5',
+            'hotel_makkah' => 'required|string|max:255',
+            'rating_makkah' => 'required|numeric|min:0|max:5',
+            'pesawat' => 'required|string',
+            'sisa_kursi' => 'required|integer',
+        ]);
+
+        $package->update($request->all());
+
+        return redirect()->route('admin.paket')->with('success', 'Paket berhasil diperbarui.');
     }
 
     /**

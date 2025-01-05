@@ -11,7 +11,10 @@
             @foreach ($packages as $package)
                 <!-- Single Card -->
                 <div class="bg-white shadow-md rounded-lg overflow-hidden">
-                    <img src="{{ $package['foto_paket'] }}" alt="{{ $package['nama_paket'] }}" class="w-full h-45 object-cover">
+                    <img src="{{ asset('storage/' . $package->foto_paket) }}" 
+                    alt="{{ $package->nama_paket }}" 
+                    class="w-full h-64 object-cover">
+                    
                     <!-- Header -->
                     <div class="p-4">
                         <h3 class="text-2xl font-bold text-gray-800 font-elmessiri">{{ $package['nama_paket'] }}</h3>

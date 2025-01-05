@@ -1,5 +1,7 @@
 @extends('layouts.auth')
 
+@section('title', 'MU Travel | Login Admin')
+
 @section('content')
 <div class="flex flex-row min-h-screen w-full">
 
