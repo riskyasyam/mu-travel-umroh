@@ -60,7 +60,7 @@ class PackageController extends Controller
         $packages->nama_paket = $request->input('nama_paket');
         $packages->foto_paket = $fotoPath; // Simpan path gambar
         $packages->description = $request->input('description');
-        $packages->harga = str_replace('.', '', $request->input('harga'));
+        $packages->harga = $request->input('harga');
         $packages->durasi = $request->input('durasi');
         $packages->tanggal = $request->input('tanggal');
         $packages->sisa_kursi = $request->input('sisa_kursi');
@@ -97,7 +97,7 @@ class PackageController extends Controller
     public function update(Request $request, string $id)
     {
         $package = Package::findOrFail($id);
-
+    
         $request->validate([
             'nama_paket' => 'required|string|max:255',
             'description' => 'required|string',
@@ -111,10 +111,27 @@ class PackageController extends Controller
             'pesawat' => 'required|string',
             'sisa_kursi' => 'required|integer',
         ]);
-
-        $package->update($request->all());
-
-        return redirect()->route('admin.paket')->with('success', 'Paket berhasil diperbarui.');
+    
+        if ($request->hasFile('foto_paket')) {
+            $fotoPath = $request->file('foto_paket')->store('paket_umroh', 'public');
+            $package->foto_paket = $fotoPath;
+        }
+    
+        $package->update([
+            'nama_paket' => $request->input('nama_paket'),
+            'description' => $request->input('description'),
+            'harga' => $request->input('harga'),
+            'durasi' => $request->input('durasi'),
+            'tanggal' => $request->input('tanggal'),
+            'sisa_kursi' => $request->input('sisa_kursi'),
+            'hotel_madinah' => $request->input('hotel_madinah'),
+            'hotel_makkah' => $request->input('hotel_makkah'),
+            'pesawat' => $request->input('pesawat'),
+            'rating_makkah' => $request->input('rating_makkah'),
+            'rating_madinah' => $request->input('rating_madinah'),
+        ]);
+    
+        return redirect()->route('admin.paket.edit', $id)->with('success', 'Paket berhasil diperbarui.');
     }
 
     /**

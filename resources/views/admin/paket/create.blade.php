@@ -16,7 +16,6 @@
 
     <form action="{{ route('admin.paket.create.store') }}" method="POST" enctype="multipart/form-data" class="space-y-4">
         @csrf
-
         <div>
             <label class="block font-medium text-gray-700">Nama Paket</label>
             <input type="text" name="nama_paket" class="w-full px-3 py-2 border rounded-lg focus:ring focus:ring-blue-200">
@@ -34,7 +33,8 @@
 
         <div>
             <label class="block font-medium text-gray-700">Harga</label>
-            <input type="text" id="harga" name="harga" class="w-full px-3 py-2 border rounded-lg focus:ring focus:ring-blue-200" oninput="formatHarga(this)">
+            <input type="text" id="harga_display" name="harga" class="w-full px-3 py-2 border rounded-lg focus:ring focus:ring-blue-200" oninput="formatHarga(this)">
+            <input type="hidden" id="harga" name="harga"> <!-- Hidden input untuk backend -->
         </div>
 
         <div>
@@ -53,18 +53,8 @@
         </div>
 
         <div>
-            <label class="block font-medium text-gray-700">Rating Hotel Madinah</label>
-            <input type="number" step="0.1" name="rating_madinah" class="w-full px-3 py-2 border rounded-lg focus:ring focus:ring-blue-200">
-        </div>
-
-        <div>
             <label class="block font-medium text-gray-700">Hotel Makkah</label>
             <input type="text" name="hotel_makkah" class="w-full px-3 py-2 border rounded-lg focus:ring focus:ring-blue-200">
-        </div>
-
-        <div>
-            <label class="block font-medium text-gray-700">Rating Hotel Makkah</label>
-            <input type="number" step="0.1" name="rating_makkah" class="w-full px-3 py-2 border rounded-lg focus:ring focus:ring-blue-200">
         </div>
 
         <div>
@@ -75,6 +65,16 @@
                 <option value="Citilink">Citilink</option>
                 <option value="Garuda Indonesia">Garuda Indonesia</option>
             </select>
+        </div>
+
+        <div>
+            <label class="block font-medium text-gray-700">Rating Hotel Makkah</label>
+            <input type="number" step="0.1" name="rating_makkah" class="w-full px-3 py-2 border rounded-lg focus:ring focus:ring-blue-200">
+        </div>
+
+        <div>
+            <label class="block font-medium text-gray-700">Rating Hotel Madinah</label>
+            <input type="number" step="0.1" name="rating_madinah" class="w-full px-3 py-2 border rounded-lg focus:ring focus:ring-blue-200">
         </div>
 
         <div>

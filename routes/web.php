@@ -7,9 +7,6 @@ use App\Http\Controllers\PackageController;
 use Illuminate\Support\Facades\Route;
 
 
-// Route::get('/', function () {
-//     return view('pages.index');
-// });
 
 Route::get('/about', function () {
     return view('pages.about');
@@ -34,5 +31,10 @@ Route::prefix('admin')->middleware(['auth'])->group(function(){
     Route::get('/paket/create', [PackageController::class, 'create'])->name('admin.paket.create');
     Route::delete('/admin/paket/{id}/destroy', [PackageController::class, 'destroy'])->name('admin.paket.destroy');
     Route::post('/paket/create/store', [PackageController::class, 'store'])->name('admin.paket.create.store');
-    Route::put('/paket/{id}/update', [PackageController::class, 'update'])->name('admin.paket.update');
+    Route::put('/paket/{id}/edit/update', [PackageController::class, 'update'])->name('admin.paket.edit.update');
+    Route::get('/dokumentasi/create', [DokumentasiController::class, 'create'])->name('admin.dokumentasi.create');
+    Route::post('/dokumentasi/create/store', [DokumentasiController::class, 'store'])->name('admin.dokumentasi.create.store');
+    Route::get('/dokumentasi/{id}/edit', [DokumentasiController::class, 'edit'])->name('admin.dokumentasi.edit');
+    Route::put('/dokumentasi/{id}/edit/update', [DokumentasiController::class, 'update'])->name('admin.dokumentasi.edit.update');
+    Route::delete('/admin/dokumentasi/{id}/destroy', [DokumentasiController::class, 'destroy'])->name('admin.dokumentasi.destroy');
 });

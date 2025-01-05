@@ -37,8 +37,8 @@
     </div>
     <script>
         function formatHarga(input) {
-            // Hilangkan semua titik sebelumnya
-            let value = input.value.replace(/\./g, '');
+            // Ambil hanya angka, hapus titik dan karakter non-digit
+            let value = input.value.replace(/\D/g, '');
 
             // Konversi ke integer untuk menghindari angka nol di depan
             let numericValue = parseInt(value, 10);
@@ -46,41 +46,18 @@
             // Jika bukan angka, kosongkan input
             if (isNaN(numericValue)) {
                 input.value = '';
+                document.getElementById('harga').value = '';
                 return;
             }
 
             // Format angka dengan titik pemisah ribuan
             input.value = numericValue.toLocaleString('id-ID');
+
+            // Simpan angka tanpa titik ke hidden input untuk dikirim ke backend
+            document.getElementById('harga').value = numericValue;
         }
     </script>
-    <script>
-        let formModified = false;
-    
-        // Deteksi perubahan pada form
-        document.querySelectorAll('input, textarea, select').forEach(input => {
-            input.addEventListener('input', () => {
-                formModified = true;
-            });
-        });
-    
-        // Konfirmasi sebelum meninggalkan halaman jika form telah diisi
-        window.addEventListener('beforeunload', function (e) {
-            if (formModified) {
-                e.preventDefault();
-                e.returnValue = 'Ingin kembali? Data tidak akan tersimpan';
-            }
-        });
-    
-        // Event untuk tombol kembali
-        document.getElementById('btnKembali').addEventListener('click', function (e) {
-            if (formModified) {
-                let confirmLeave = confirm('Ingin kembali? Data tidak akan tersimpan');
-                if (!confirmLeave) {
-                    e.preventDefault();
-                }
-            }
-        });
-    </script>
+
 </body>
 
 </html>

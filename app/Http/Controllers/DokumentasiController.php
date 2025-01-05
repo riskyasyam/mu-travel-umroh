@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Dokumentasi;
 
 class DokumentasiController extends Controller
 {
@@ -11,7 +12,8 @@ class DokumentasiController extends Controller
      */
     public function index()
     {
-        return view('admin.dokumentasi');
+        $dokumentasi = Dokumentasi::all();
+        return view('admin.dokumentasi', compact('dokumentasi'));
     }
 
     /**
@@ -19,7 +21,7 @@ class DokumentasiController extends Controller
      */
     public function create()
     {
-        //
+        return view('admin.dokumentasi.create');
     }
 
     /**
@@ -27,7 +29,17 @@ class DokumentasiController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $request->validate([
+            'url_foto' => 'required|image|mimes:jpeg,png,jpg,gif|max:2048',
+        ]);
+
+        $fotoPath = $request->file('url_foto')->store('dokumentasi_umroh', 'public');
+
+        $dokumentasi = new Dokumentasi();
+        $dokumentasi->url_foto = $fotoPath;
+        $dokumentasi->save();
+
+        return redirect()->route('admin.dokumentasi.create')->with('success', 'Dokumentasi berhasil ditambahkan.');
     }
 
     /**
@@ -35,7 +47,8 @@ class DokumentasiController extends Controller
      */
     public function show(string $id)
     {
-        //
+        $dok = Dokumentasi::findOrFail($id);
+        return view('admin.dokumentasi.show', compact('dok'));
     }
 
     /**
@@ -43,22 +56,39 @@ class DokumentasiController extends Controller
      */
     public function edit(string $id)
     {
-        //
+        $dok = Dokumentasi::findOrFail($id);
+        return view('admin.dokumentasi.edit', compact('dok'));
     }
 
     /**
      * Update the specified resource in storage.
      */
     public function update(Request $request, string $id)
-    {
-        //
+{
+    $dokumentasi = Dokumentasi::findOrFail($id);
+
+    $request->validate([
+        'url_foto' => 'required|image|mimes:jpeg,png,jpg,gif|max:2048',
+    ]);
+
+    if ($request->hasFile('url_foto')) {
+        $fotoPath = $request->file('url_foto')->store('dokumentasi_umroh', 'public');
+        $dokumentasi->url_foto = $fotoPath;
     }
+
+    $dokumentasi->save();
+
+    return redirect()->route('admin.dokumentasi.edit', $id)->with('success', 'Dokumentasi berhasil diperbarui.');
+}
 
     /**
      * Remove the specified resource from storage.
      */
     public function destroy(string $id)
     {
-        //
+        $dok = Dokumentasi::findOrFail($id);
+        $dok->delete();
+
+        return redirect()->route('admin.dokumentasi')->with('success', 'Dokumentasi berhasil dihapus.');
     }
 }

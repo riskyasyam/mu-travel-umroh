@@ -14,9 +14,11 @@
         </div>
     @endif
 
-    <form action="{{ route('admin.paket.update', $package->id) }}" method="POST" enctype="multipart/form-data" class="space-y-4">
+    <form action="{{ route('admin.paket.edit.update', $package->id) }}" method="POST" enctype="multipart/form-data" class="space-y-4">
         @csrf
         @method('PUT')
+
+        <input type="hidden" name="id" value="{{ $package->id }}">
 
         <div>
             <label class="block font-medium text-gray-700">Nama Paket</label>
@@ -35,7 +37,8 @@
 
         <div>
             <label class="block font-medium text-gray-700">Harga</label>
-            <input type="text" id="harga" name="harga" value="{{ number_format($package->harga, 0, ',', '.') }}" class="w-full px-3 py-2 border rounded-lg focus:ring focus:ring-blue-200" oninput="formatHarga(this)">
+            <input type="text" id="harga_display" name="harga" class="w-full px-3 py-2 border rounded-lg focus:ring focus:ring-blue-200" oninput="formatHarga(this)">
+            <input type="hidden" id="harga" name="harga"> <!-- Hidden input untuk backend -->
         </div>
 
         <div>
@@ -84,7 +87,7 @@
         </div>
 
         <div class="flex justify-between">
-            <a href="{{ route('admin.paket') }}" id="btnKembali" class="bg-gray-500 text-white py-2 px-4 rounded-lg hover:bg-gray-600 transition">
+            <a href="{{ route('admin.dokumentasi') }}" id="btnKembali" class="bg-gray-500 text-white py-2 px-4 rounded-lg hover:bg-gray-600 transition">
                 Kembali
             </a>
 

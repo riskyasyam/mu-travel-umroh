@@ -20,6 +20,7 @@
                         <th class="border border-gray-300 px-4 py-2">Pesawat</th>
                         <th class="border border-gray-300 px-4 py-2">Hotel Makkah</th>
                         <th class="border border-gray-300 px-4 py-2">Hotel Madinah</th>
+                        <th class="border border-gray-300 px-4 py-2">Foto Paket</th>
                         <th class="border border-gray-300 px-4 py-2">Aksi</th>
                     </tr>
                 </thead>
@@ -35,6 +36,7 @@
                             <td class="border border-gray-300 px-4 py-2">{{ $package->pesawat }}</td>
                             <td class="border border-gray-300 px-4 py-2">{{ $package->hotel_makkah }}</td>
                             <td class="border border-gray-300 px-4 py-2">{{ $package->hotel_madinah }}</td>
+                            <td class="border border-gray-300 px-4 py-2">{{ $package->foto_paket }}</td>
                             <td class="border border-gray-300 px-4 py-2">
                                 <a href="{{ route('admin.paket.edit', $package->id) }}" 
                                    class="bg-yellow-500 text-white px-4 py-2 rounded">Edit</a>
