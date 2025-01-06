@@ -64,22 +64,22 @@ class DokumentasiController extends Controller
      * Update the specified resource in storage.
      */
     public function update(Request $request, string $id)
-{
-    $dokumentasi = Dokumentasi::findOrFail($id);
+    {
+        $dokumentasi = Dokumentasi::findOrFail($id);
 
-    $request->validate([
-        'url_foto' => 'required|image|mimes:jpeg,png,jpg,gif|max:2048',
-    ]);
+        $request->validate([
+            'url_foto' => 'required|image|mimes:jpeg,png,jpg,gif|max:2048',
+        ]);
 
-    if ($request->hasFile('url_foto')) {
-        $fotoPath = $request->file('url_foto')->store('dokumentasi_umroh', 'public');
-        $dokumentasi->url_foto = $fotoPath;
+        if ($request->hasFile('url_foto')) {
+            $fotoPath = $request->file('url_foto')->store('dokumentasi_umroh', 'public');
+            $dokumentasi->url_foto = $fotoPath;
+        }
+
+        $dokumentasi->save();
+
+        return redirect()->route('admin.dokumentasi.edit', $id)->with('success', 'Dokumentasi berhasil diperbarui.');
     }
-
-    $dokumentasi->save();
-
-    return redirect()->route('admin.dokumentasi.edit', $id)->with('success', 'Dokumentasi berhasil diperbarui.');
-}
 
     /**
      * Remove the specified resource from storage.

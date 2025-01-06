@@ -21,6 +21,9 @@
                 <li class="mb-2"><a href="{{ route('admin.dokumentasi') }}"
                         class="block py-2 px-4 rounded-lg {{ request()->routeIs('admin.dokumentasi') ? 'bg-yellow-500' : 'hover:bg-yellow-500' }}">Dokumentasi</a>
                 </li>
+                <li class="mb-2"><a href="{{ route('admin.testimoni') }}"
+                    class="block py-2 px-4 rounded-lg {{ request()->routeIs('admin.testimoni') ? 'bg-yellow-500' : 'hover:bg-yellow-500' }}">Testimoni</a>
+                </li>
                 <li class="mb-2">
                     <form action="{{ route('logout') }}" method="POST">
                         @csrf

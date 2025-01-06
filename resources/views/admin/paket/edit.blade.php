@@ -87,7 +87,7 @@
         </div>
 
         <div class="flex justify-between">
-            <a href="{{ route('admin.dokumentasi') }}" id="btnKembali" class="bg-gray-500 text-white py-2 px-4 rounded-lg hover:bg-gray-600 transition">
+            <a href="{{ route('admin.paket') }}" id="btnKembali" class="bg-gray-500 text-white py-2 px-4 rounded-lg hover:bg-gray-600 transition">
                 Kembali
             </a>
 
