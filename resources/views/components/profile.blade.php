@@ -12,17 +12,17 @@
                 <div class="grid grid-cols-2 gap-6 mb-6 pt-6">
                     <!-- Owner & Dirut -->
                     <div>
-                        <h3 class="text-3xl font-bold text-yellow-600 font-elmessiri">Owner & Dirut</h3>
+                        <h3 class="text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-gradientStart to-gradientEnd font-elmessiri">Owner & Dirut</h3>
                         <p class="text-xl text-gray-800">H. Mohammad Fauzi</p>
                     </div>
                     <!-- Handling -->
                     <div>
-                        <h3 class="text-3xl font-bold text-yellow-600 font-elmessiri">Handling</h3>
+                        <h3 class="text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-gradientStart to-gradientEnd font-elmessiri">Handling</h3>
                         <p class="text-xl text-gray-800">Dikelola oleh TIM MU SAUDI</p>
                     </div>
                 </div>
                 <!-- Alamat Kantor -->
-                <h3 class="text-3xl font-bold text-yellow-600 font-elmessiri pt-5">Alamat Kantor</h3>
+                <h3 class="text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-gradientStart to-gradientEnd font-elmessiri pt-5">Alamat Kantor</h3>
                 <div class="grid grid-cols-2 gap-6">
                     <!-- Head Office -->
                     <div>

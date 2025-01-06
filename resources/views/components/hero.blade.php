@@ -9,7 +9,7 @@
         <!-- Text 2 -->
         <h2 class="text-white text-3xl md:text-5xl font-bold leading-snug mb-4">
             UMROH BUKAN CUMA MIMPI, <br>
-            TAPI NYATA! <br>
+            <span class="text-transparent bg-clip-text bg-gradient-to-r from-gradientStart to-gradientEnd">TAPI NYATA!</span> <br>
             Daftar Umroh Sekarang, Cukup <br>
             Rp 2 Juta Saja!
         </h2>

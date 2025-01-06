@@ -68,11 +68,11 @@
                             <!-- Price -->
                             <div class="text-right">
                                 <p class="text-sm text-gray-600">Harga Mulai:</p>
-                                <p class="text-lg font-bold text-black">Rp{{ number_format($package->harga, 0, ',', '.') }}</p>
+                                <p class="text-xl font-semibold text-black font-elmessiri">Rp{{ number_format($package->harga, 0, ',', '.') }}</p>
                             </div>
                         </div>
                         <!-- Booking Button -->
-                        <a href="#" class="block text-center bg-gradient-to-r from-gradientStart to-gradientEnd text-black py-2 rounded-md hover:bg-yellow-600">
+                        <a href="https://wa.me/081234550234" class="font-semibold block text-center bg-gradient-to-r from-gradientStart to-gradientEnd text-white py-2 rounded-md hover:bg-yellow-600">
                             Booking Sekarang
                         </a>
                     </div>
