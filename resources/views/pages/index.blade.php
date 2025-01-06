@@ -15,5 +15,6 @@
     @isset($dokumentasi)
     @include('components.dokumentasi', ['dokumentasi' => $dokumentasi])
     @endisset
+    @include('components.mitra')
     @include('components.rekening')
 @endsection

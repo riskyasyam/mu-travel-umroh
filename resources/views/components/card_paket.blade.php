@@ -13,12 +13,12 @@
                 <div class="bg-white shadow-md rounded-lg overflow-hidden">
                     <img src="{{ asset('storage/' . $package->foto_paket) }}" 
                     alt="{{ $package->nama_paket }}" 
-                    class="w-full h-64 object-cover">
+                    class="w-full h-100 object-cover">
                     
                     <!-- Header -->
                     <div class="p-4">
                         <h3 class="text-2xl font-bold text-gray-800 font-elmessiri">{{ $package['nama_paket'] }}</h3>
-                        <p class="text-sm text-gray-600 mt-2">{{ \Carbon\Carbon::parse($package->tanggal)->translatedFormat('d F Y') }}</p>
+                        <p class="text-sm text-gray-600 mt-2 font-medium">{{ \Carbon\Carbon::parse($package->tanggal)->translatedFormat('d F Y') }}</p>
                     </div>
 
                     <!-- Details -->

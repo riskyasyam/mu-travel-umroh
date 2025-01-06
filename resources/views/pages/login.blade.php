@@ -8,7 +8,7 @@
     <!-- Bagian Kiri: Form Login -->
     <div class="w-1/2 flex items-center justify-center">
         <div class="w-full max-w-md px-8">
-            <h2 class="text-3xl font-bold text-center mb-4">LOGIN ADMIN</h2>
+            <h2 class="text-3xl font-bold text-center mb-4 font-elmessiri">LOGIN ADMIN</h2>
             <p class="text-center text-gray-600 mb-6">
                 Untuk masuk ke halaman admin silahkan login terlebih dahulu
             </p>

@@ -17,7 +17,7 @@
             </div>
             <!-- Deskripsi -->
             <p class="text-gray-700 leading-relaxed mt-5">
-                MU Travel adalah nama singkat dari PT. Mukhtara Indonesia Utama yang fokus pada perjalanan ibadah umroh dan halal tour. Kami memiliki orientasi pada aspek kenyamanan dan keamanan agar jamaah merasa puas saat bersama MU Travel <br>
+                MU Travel adalah nama singkatan dari PT. Mukhtara Indonesia Utama yang fokus pada perjalanan ibadah umroh dan halal tour. Kami memiliki orientasi pada aspek kenyamanan dan keamanan agar jamaah merasa puas saat bersama MU Travel <br>
                 Memiliki prinsip - prinsip berpegang teguh pada ajaran agama Islam, dengan sumber daya insani yang bertaqwa, loyal pada perusahaan dan amanah. Kami memberikan inovasi, progresif dan bekerja keras untuk memberikan pelayanan terbaik kepada jamaah. <br>
                 Suatu kebanggaan, karena PT. Mukhtara Indonesia telah memiliki Tim Perwakilan Saudi baik di Madinah atau Mekkah <br>
                 Tim kami memastikan kesiapan hotel beberapa bulan sebelum Jamaah tiba di Saudi dan kami telah bekerja sama dengan provider visa untuk kepastian penerbitan Visa umroh Jamaah kami

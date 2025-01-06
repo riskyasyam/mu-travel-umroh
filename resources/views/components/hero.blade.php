@@ -14,12 +14,12 @@
             Rp 2 Juta Saja!
         </h2>
         <!-- Text 3 -->
-        <p class="text-yellow-500 text-sm md:text-base mb-8">
+        <p class="text-yellow-500 text-lg md:text-base mb-8">
             PT MUKHTARA INDONESIA UTAMA PPIU No. 91201044207990001 / 2024
         </p>
         <!-- Button -->
-        <a href="https://wa.me/081234550234" class="bg-gradient-to-r from-gradientStart to-gradientEnd text-black py-3 px-6 rounded-lg flex items-center space-x-2 hover:bg-yellow-600">
-            <img src="assets/images/whatsapp.png" alt="WhatsApp" class="h-5">
+        <a href="https://wa.me/081234550234" class="bg-gradient-to-r from-gradientStart to-gradientEnd text-white py-3 px-6 rounded-lg flex items-center space-x-2 hover:bg-yellow-600">
+            <img src="assets/images/wa-putih.png" alt="WhatsApp" class="h-5">
             <span>Pesan Paket</span>
         </a>
     </div>
