@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Dokumentasi;
 use App\Models\Package;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
@@ -14,7 +15,8 @@ class PackageController extends Controller
     public function index()
     {
         $packages = Package::all();
-        return view('pages.index', compact('packages'));
+        $dokumentasi = Dokumentasi::all();
+        return view('pages.index', compact('packages', 'dokumentasi'));
     }
 
     public function tampil()

@@ -91,4 +91,11 @@ class DokumentasiController extends Controller
 
         return redirect()->route('admin.dokumentasi')->with('success', 'Dokumentasi berhasil dihapus.');
     }
+
+    public function getDokumentasi()
+    {
+        $dokumentasi = Dokumentasi::all();
+
+        return view('pages.index', compact('dokumentasi'));
+    }
 }

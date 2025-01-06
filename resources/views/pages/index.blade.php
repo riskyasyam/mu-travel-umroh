@@ -10,6 +10,8 @@
     @isset($packages)
     @include('components.card_paket', ['packages' => $packages])
     @endisset
-    @include('components.dokumentasi')
+    @isset($dokumentasi)
+    @include('components.dokumentasi', ['dokumentasi' => $dokumentasi])
+    @endisset
     @include('components.rekening')
 @endsection
