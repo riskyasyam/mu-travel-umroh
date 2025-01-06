@@ -11,6 +11,7 @@
     @isset($packages)
     @include('components.card_paket', ['packages' => $packages])
     @endisset
+    @include('components.include')
     @isset($dokumentasi)
     @include('components.dokumentasi', ['dokumentasi' => $dokumentasi])
     @endisset
