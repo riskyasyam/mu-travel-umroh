@@ -15,6 +15,10 @@
                 <h2 class="text-xl font-semibold">Jumlah Dokumentasi</h2>
                 <p class="text-2xl font-bold">{{ $dokumentasiCount }}</p>
             </div>
+            <div class="bg-white p-5 rounded-lg shadow-md">
+                <h2 class="text-xl font-semibold">Jumlah Testimoni</h2>
+                <p class="text-2xl font-bold">{{ $testimoniCount }}</p>
+            </div>
         </div>
     </div>
 @endsection

@@ -17,18 +17,31 @@ class TestimoniController extends Controller
     {
         return view('admin.testimoni.create');
     }
-    
+
     public function store(Request $request)
     {
         $request->validate([
-            'foto_testimoni' => 'required|image|mimes:jpeg,png,jpg,gif|max:2048',
+            'file' => 'required|mimes:jpeg,png,jpg,gif,mp4,mov,avi|max:51200', // Validasi gambar & video
+            'type' => 'nullable|in:image,video', // Opsional, akan ditentukan dari MIME type
         ]);
 
-        $fotoPath = $request->file('foto_testimoni')->store('testimoni_umroh', 'public');
+        if (!$request->hasFile('file')) {
+            return back()->withErrors(['file' => 'File tidak ditemukan.']);
+        }
 
-        $testimoni = new Testimoni();
-        $testimoni->foto_testimoni = $fotoPath;
-        $testimoni->save();
+        // Simpan file ke storage
+        $file = $request->file('file');
+        $filePath = $file->store('testimoni_umroh', 'public');
+        $fileType = $file->getMimeType();
+
+        // Tentukan tipe file (image/video)
+        $type = str_contains($fileType, 'video') ? 'video' : 'image';
+
+        // Simpan data ke database
+        Testimoni::create([
+            'file' => $filePath,
+            'type' => $type,
+        ]);
 
         return redirect()->route('admin.testimoni.create')->with('success', 'Testimoni berhasil ditambahkan.');
     }
@@ -50,15 +63,27 @@ class TestimoniController extends Controller
         $testimoni = Testimoni::findOrFail($id);
 
         $request->validate([
-            'foto_testimoni' => 'required|image|mimes:jpeg,png,jpg,gif|max:2048',
+            'file' => 'required|mimes:jpeg,png,jpg,gif,mp4,mov,avi|max:51200', // Validasi gambar & video
+            'type' => 'nullable|in:image,video', // Opsional, akan ditentukan dari MIME type
         ]);
 
-        if ($request->hasFile('url_foto')) {
-            $fotoPath = $request->file('foto_testimoni')->store('testimoni_umroh', 'public');
-            $testimoni->foto_testimoni = $fotoPath;
+        if (!$request->hasFile('file')) {
+            return back()->withErrors(['file' => 'File tidak ditemukan.']);
         }
 
-        $testimoni->save();
+        // Simpan file ke storage
+        $file = $request->file('file');
+        $filePath = $file->store('testimoni_umroh', 'public');
+        $fileType = $file->getMimeType();
+
+        // Tentukan tipe file (image/video)
+        $type = str_contains($fileType, 'video') ? 'video' : 'image';
+
+        // Update data di database
+        $testimoni->update([
+            'file' => $filePath,
+            'type' => $type,
+        ]);
 
         return redirect()->route('admin.testimoni.edit', $id)->with('success', 'Dokumentasi berhasil diperbarui.');
     }

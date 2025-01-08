@@ -13,7 +13,8 @@ return new class extends Migration
     {
         Schema::create('testimoni', function (Blueprint $table) {
             $table->id();
-            $table->string('foto_testimoni');
+            $table->string('file'); // Bisa untuk foto atau video
+            $table->enum('type', ['image', 'video'])->default('image'); // Menentukan jenis file
             $table->timestamps();
         });
     }

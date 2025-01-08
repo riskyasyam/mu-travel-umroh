@@ -1,5 +1,5 @@
 <section class="py-16 bg-cover bg-center" style="background-image: url('/assets/images/bg-profile.png');">
-    <div class="container mx-auto">
+    <div class="container mx-auto flex flex-col md:flex-row items-center px-5 md:px-0">
         <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
             <!-- Kolom Teks -->
             <div class="self-center">

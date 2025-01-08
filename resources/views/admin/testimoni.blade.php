@@ -22,10 +22,15 @@
                         <tr>
                             <td class="border border-gray-300 px-4 py-2">{{ $index + 1 }}</td>
                             <td class="py-2 px-4 border-b">
-                                <a href="{{ $testimoni->foto_testimoni }}" target="_blank" class="text-blue-500 hover:underline">
-                                    {{ $testimoni->foto_testimoni }}
-                                </a>
-                            </td>
+                                @if ($testimoni->type == 'image')
+                                    <img src="{{ asset('storage/' . $testimoni->file) }}" alt="Testimoni" class="w-32 h-32 object-cover">
+                                @else
+                                    <video width="200" controls>
+                                        <source src="{{ asset('storage/' . $testimoni->file) }}" type="video/mp4">
+                                        Your browser does not support the video tag.
+                                    </video>
+                                @endif
+                            </td>                            
                             <td class="border border-gray-300 px-4 py-2">
                                 <a href="{{ route('admin.testimoni.edit', $testimoni->id) }}" 
                                    class="bg-yellow-500 text-white px-4 py-2 rounded">Edit</a>

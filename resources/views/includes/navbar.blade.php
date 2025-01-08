@@ -9,14 +9,38 @@
                 <p class="text-transparent bg-clip-text bg-white text-xs font-petrona">PPIU No. 91201044207990001 / 2024</p>
             </div>
         </div>
+        
+        <!-- Hamburger Menu (Mobile) -->
+        <button id="menu-toggle" class="lg:hidden focus:outline-none">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+            </svg>
+        </button>
+        
         <!-- Navigation Links -->
-        <ul class="flex space-x-6">
+        <ul id="nav-links" class="hidden lg:flex space-x-6">
             <li><a href="#" class="hover:text-gray-300 font-montserrat">Home</a></li>
             <li><a href="#" class="hover:text-gray-300 font-montserrat">Tentang MU Travel</a></li>
             <li><a href="#" class="hover:text-gray-300 font-montserrat">Paket</a></li>
             <li><a href="#" class="hover:text-gray-300 font-montserrat">Dokumentasi</a></li>
         </ul>
+        
         <!-- Button Login -->
-        <a href="{{ route('login') }}" class="bg-gradient-to-r from-gradientStart to-gradientEnd text-black py-2 px-7 rounded-2xl hover:bg-yellow-600 font-poppins font-semibold">Login</a>
+        <a href="{{ route('login') }}" class="hidden lg:block bg-gradient-to-r from-gradientStart to-gradientEnd text-black py-2 px-7 rounded-2xl hover:bg-yellow-600 font-poppins font-semibold">Login</a>
+    </div>
+    
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="hidden lg:hidden bg-black text-white px-5 py-4 space-y-2">
+        <a href="#" class="block hover:text-gray-300 font-montserrat">Home</a>
+        <a href="#" class="block hover:text-gray-300 font-montserrat">Tentang MU Travel</a>
+        <a href="#" class="block hover:text-gray-300 font-montserrat">Paket</a>
+        <a href="#" class="block hover:text-gray-300 font-montserrat">Dokumentasi</a>
+        <a href="{{ route('login') }}" class="block bg-gradient-to-r from-gradientStart to-gradientEnd text-black py-2 px-7 rounded-2xl text-center hover:bg-yellow-600 font-poppins font-semibold">Login</a>
     </div>
 </nav>
+
+<script>
+    document.getElementById('menu-toggle').addEventListener('click', function () {
+        document.getElementById('mobile-menu').classList.toggle('hidden');
+    });
+</script>

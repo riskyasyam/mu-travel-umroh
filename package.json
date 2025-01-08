@@ -15,6 +15,7 @@
         "vite": "^6.0"
     },
     "dependencies": {
-        "flowbite": "^2.5.2"
+        "flowbite": "^2.5.2",
+        "plyr": "^3.7.8"
     }
 }

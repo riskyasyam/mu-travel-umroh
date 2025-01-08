@@ -11,5 +11,10 @@
     </main>
 
     @include('includes.footer')
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const player = new Plyr('#player');
+        });
+    </script>
 </body>
 </html>

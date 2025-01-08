@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Dokumentasi;
 use App\Models\Package;
+use App\Models\Testimoni;
 
 class AdminController extends Controller
 {
@@ -12,8 +13,9 @@ class AdminController extends Controller
         session(['admin_active' => true]); // Menyimpan session bahwa admin aktif
 
         $packageCount = Package::count();
-        $dokumentasiCount = Dokumentasi::count(); // Menambahkan jumlah dokumentasi
+        $dokumentasiCount = Dokumentasi::count(); 
+        $testimoniCount = Testimoni::count();
 
-        return view('admin.dashboard', compact('packageCount', 'dokumentasiCount'));
+        return view('admin.dashboard', compact('packageCount', 'dokumentasiCount', 'testimoniCount'));
     }
 }
