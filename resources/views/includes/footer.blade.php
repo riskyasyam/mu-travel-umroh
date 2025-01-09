@@ -25,7 +25,7 @@
                 <li><a href="#" class="text-sm hover:underline">Home</a></li>
                 <li><a href="#" class="text-sm hover:underline">Tentang MU Travel</a></li>
                 <li><a href="#" class="text-sm hover:underline">Paket</a></li>
-                <li><a href="#" class="text-sm hover:underline">Kemitraan</a></li>
+                <li><a href="#" class="text-sm hover:underline">Dokumentasi</a></li>
             </ul>
         </div>
 

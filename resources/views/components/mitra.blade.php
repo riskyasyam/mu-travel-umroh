@@ -1,20 +1,16 @@
 <section class="relative py-24 bg-cover bg-center bg-no-repeat" style="background-image: url('/assets/images/bg-mitra.png');">
-    <div class="container mx-auto flex items-center justify-center">
+    <div class="container mx-auto flex justify-center px-5 md:px-0">
         <!-- Row -->
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center bg-white shadow-lg rounded-lg p-8 relative z-10 max-w-4xl">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center bg-white shadow-lg rounded-lg p-8 relative z-10 max-w-4xl mx-auto">
             <!-- Kolom Teks -->
             <div>
-                <!-- Judul kecil -->
-                <!-- Judul kecil -->
                 <div class="flex justify-center">
                     <img src="/assets/images/logo.png" alt="Logo" class="w-10 h-10">
                 </div>
                 <div class="w-12 h-1 bg-yellow-500 my-2 mx-auto md:mx-0"></div>
 
-                <!-- Judul besar -->
                 <h2 class="text-2xl font-bold text-gray-900 text-center md:text-left mb-4">Saya sebagai Tour Leader</h2>
 
-                <!-- Paragraf -->
                 <p class="text-gray-700 text-center md:text-left mb-6">
                     "Saya telah menemani ratusan jamaah dalam perjalanan umroh bersama MU Travel, memastikan setiap langkah ibadah berjalan lancar dan nyaman. 
                     Dengan pelayanan terbaik dan bimbingan penuh, Anda bisa fokus beribadah tanpa khawatir! 
@@ -22,7 +18,6 @@
                     Daftar sekarang melalui saya dan pastikan perjalanan spiritual Anda menjadi lebih berkesan!"
                 </p>
 
-                <!-- Rectangle Text Kuning -->
                 <div class="bg-yellow-500 text-white font-semibold text-center md:text-left py-2 px-4 rounded-md">
                     TUTUS INDAR WATI (TOUR LEADER)
                 </div>

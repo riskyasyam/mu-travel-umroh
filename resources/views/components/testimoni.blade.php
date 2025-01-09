@@ -1,4 +1,4 @@
-<section class="py-16 bg-white">
+<section id="testimoni" class="py-16 bg-white">
     <div id="animation-carousel" class="relative w-full max-w-4xl mx-auto" data-carousel="static">
         <div class="text-center mb-10">
             <h2 class="text-4xl font-bold text-black font-elmessiri">Testimoni</h2>
@@ -67,38 +67,53 @@
 </section>
 <script>
     document.addEventListener("DOMContentLoaded", function() {
-        const carouselItems = document.querySelectorAll("[data-carousel-item]");
-        const prevButton = document.querySelector("[data-carousel-prev]");
-        const nextButton = document.querySelector("[data-carousel-next]");
-        let currentIndex = 0;
+        document.querySelectorAll("[data-carousel='static']").forEach((carousel) => {
+            const carouselItems = carousel.querySelectorAll("[data-carousel-item]");
+            const prevButton = carousel.querySelector("[data-carousel-prev]");
+            const nextButton = carousel.querySelector("[data-carousel-next]");
+            const indicators = carousel.querySelectorAll("[data-carousel-slide-to]");
+            let currentIndex = 0;
 
-        function updateCarousel(index) {
-            carouselItems.forEach((item, i) => {
-                item.classList.toggle("block", i === index);
-                item.classList.toggle("hidden", i !== index);
+            function updateCarousel(index) {
+                carouselItems.forEach((item, i) => {
+                    item.classList.toggle("block", i === index);
+                    item.classList.toggle("hidden", i !== index);
 
-                // Pause all videos except the active one
-                const video = item.querySelector("video");
-                if (video) {
-                    if (i === index) {
-                        video.play();
-                    } else {
-                        video.pause();
+                    // Pause all videos except the active one
+                    const video = item.querySelector("video");
+                    if (video) {
+                        if (i === index) {
+                            video.play();
+                        } else {
+                            video.pause();
+                        }
                     }
-                }
+                });
+
+                // Update indicator
+                indicators.forEach((indicator, i) => {
+                    indicator.setAttribute("aria-current", i === index ? "true" : "false");
+                });
+            }
+
+            nextButton?.addEventListener("click", function() {
+                currentIndex = (currentIndex + 1) % carouselItems.length;
+                updateCarousel(currentIndex);
             });
-        }
 
-        nextButton.addEventListener("click", function() {
-            currentIndex = (currentIndex + 1) % carouselItems.length;
+            prevButton?.addEventListener("click", function() {
+                currentIndex = (currentIndex - 1 + carouselItems.length) % carouselItems.length;
+                updateCarousel(currentIndex);
+            });
+
+            indicators.forEach((indicator, i) => {
+                indicator.addEventListener("click", function() {
+                    currentIndex = i;
+                    updateCarousel(currentIndex);
+                });
+            });
+
             updateCarousel(currentIndex);
         });
-
-        prevButton.addEventListener("click", function() {
-            currentIndex = (currentIndex - 1 + carouselItems.length) % carouselItems.length;
-            updateCarousel(currentIndex);
-        });
-
-        updateCarousel(currentIndex);
     });
 </script>

@@ -1,5 +1,5 @@
 <section class="py-16 bg-white">
-    <div class="container mx-auto text-center">
+    <div class="container mx-auto flex flex-col md:flex-col items-center px-5 md:px-0">
         <!-- Judul Section -->
         <h2 class="text-4xl font-bold text-gray-800 mb-4 font-elmessiri">Kenapa Harus Bersama MU Travel</h2>
         <!-- Gambar di bawah judul -->

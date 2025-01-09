@@ -22,7 +22,7 @@ class LoginController extends Controller
             return redirect()->intended('/admin/dashboard');
         }
 
-        return back()->withErrors(['email' => 'Invalid credentials']);
+        return back()->withErrors(['email' => 'Email atau password salah'])->withInput();
     }
 
     public function logout()

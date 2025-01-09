@@ -3,6 +3,10 @@
 @tailwind utilities;
 @import 'plyr/dist/plyr.css';
 
+html {
+    scroll-behavior: smooth;
+}
+
 /* Fonts Poppins */
 @font-face {
     font-family: "Poppins";

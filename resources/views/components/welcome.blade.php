@@ -1,5 +1,5 @@
-<section class="py-16 bg-white">
-    <div class="container mx-auto flex flex-col md:flex-row items-center">
+<section id="tentang" class="py-16 bg-white">
+    <div class="container mx-auto flex flex-col md:flex-row items-center px-5 md:px-0">
         <!-- Gambar -->
         <div class="w-full md:w-1/2 flex justify-center">
             <img src="/assets/images/profile-img.png" alt="Profile Image">

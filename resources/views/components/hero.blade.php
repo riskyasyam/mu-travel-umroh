@@ -1,4 +1,4 @@
-<section class="relative bg-cover bg-center h-screen" style="background-image: url('/assets/images/bg-hero.png');">
+<section id="hero" class="relative bg-cover bg-center h-screen" style="background-image: url('/assets/images/bg-hero.png');">
     <!-- Overlay -->
     <div class="absolute inset-0 bg-black bg-opacity-50"></div>
     

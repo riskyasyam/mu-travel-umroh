@@ -1,35 +1,28 @@
-<section class="py-5 bg-white">
-    <div class="relative bg-cover bg-center rounded-3xl shadow-md px-5 mt-8 mx-40" style="background-image: url('/assets/images/bg-cta.png');">
-        <div class="flex flex-col lg:flex-row items-center justify-between gap-6 px-16">
-            <!-- Column Text -->
-            <div class="text-white lg:w-2/3 py-16 space-y-3">
-                <h2 class="text-xl font-bold">Jangan Tunda Lagi Impian Anda!</h2>
-                <h1 class="text-5xl font-bold">Daftar umroh <br>sekarang, cukup Rp 2 Juta <br> saja!</h1>
-                <p class="text-lg font-medium">Mau konsultasi atau tanya - tanya dulu? Klik tombol di bawah ini untuk info lebih lanjut!</p>
-            </div>
-    
-            <!-- Column QR + Buttons -->
-        <div class="flex flex-col items-center bg-white bg-opacity-50 rounded-lg p-5 lg:w-2/4">
-            <div class="flex items-center gap-5">
-                <!-- Contact Info -->
-                <div class="w-auto h-auto p-4 bg-white rounded-lg">
-                    <p class="text-sm font-medium font-montserrat">Hubungi saya di</p>
-                    <p class="text-3xl font-medium font-montserrat text-yellow-400">WhatsApp</p>
-                    <div class="bg-yellow-400 text-center rounded-lg mt-2 flex justify-center items-center w-auto h-auto">
-                        <button class="text-black mx-2 my-1 px-6 py-2 rounded-lg font-medium mr-2 bg-white font-montserrat">KLIK INI ATAU SCAN QR</button>
-                        <div class="bg-white p-2 rounded-lg mr-1">
-                            <img src="/assets/images/whatsapp.png" alt="Whatsapp" class="w-6">
-                        </div>
-                    </div>
+<section style="background-image: url('/assets/images/bg-cta-3.jpg');">
+    <div class="relative items-center w-full px-5 py-12 mx-auto md:px-12 lg:px-16 max-w-7xl lg:py-24">
+      <div class="flex w-full mx-auto text-left">
+        <div class="relative inline-flex items-center mx-auto align-middle">
+          <div class="text-center">
+            <p class="max-w-xl mx-auto mt-8 text-base leading-relaxed text-neutral-500 font-bold">Jangan Tunda Lagi Impian Anda</p>
+            <h1 class="max-w-5xl text-2xl font-bold leading-none tracking-tighter text-black-600 md:text-5xl lg:text-6xl lg:max-w-7xl">
+              Daftar Umroh Sekarang <br class="hidden lg:block">
+              Cukup <span class="text-transparent bg-clip-text bg-gradient-to-r from-gradientStart to-gradientEnd">2 Juta</span> Saja!
+            </h1>
+            <p class="max-w-xl mx-auto mt-8 text-base leading-relaxed text-gray-500">Mau konsultasi atau tanya - tanya dulu? Klik tombol di bawah ini untuk info lebih lanjut</p>
+            <div class="flex justify-center w-full max-w-2xl gap-2 mx-auto mt-6">
+                <div class="mt-3 rounded-lg sm:mt-0">
+                    <a href="https://wa.me/6281234550234" target="_blank">
+                        <button class="px-5 py-4 text-base font-medium text-center text-white transition duration-500 ease-in-out transform bg-gradient-to-r from-gradientStart to-gradientEnd lg:px-10 rounded-xl hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500">
+                            WhatsApp Sekarang
+                        </button>
+                    </a>
                 </div>
-
-                <!-- QR Code -->
-                <div class="w-auto h-auto bg-white rounded-lg overflow-hidden px-5 py-5">
-                    <img src="/assets/images/qr-code.png" alt="QR Code" class="w-full h-full object-cover">
-                </div>
+              <div class="mt-3 rounded-lg sm:mt-0 sm:ml-3">
+                <button class="items-center block px-5 lg:px-10 py-3.5 text-base font-medium text-center text-yellow-500 transition duration-500 ease-in-out transform border-2 border-white shadow-md rounded-xl focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-500">Liat Paket Umroh</button>
+              </div>
             </div>
+          </div>
         </div>
-        </div>
+      </div>
     </div>
-    
-</section>
+  </section>

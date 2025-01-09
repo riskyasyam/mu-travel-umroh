@@ -19,10 +19,11 @@
         
         <!-- Navigation Links -->
         <ul id="nav-links" class="hidden lg:flex space-x-6">
-            <li><a href="#" class="hover:text-gray-300 font-montserrat">Home</a></li>
-            <li><a href="#" class="hover:text-gray-300 font-montserrat">Tentang MU Travel</a></li>
-            <li><a href="#" class="hover:text-gray-300 font-montserrat">Paket</a></li>
-            <li><a href="#" class="hover:text-gray-300 font-montserrat">Dokumentasi</a></li>
+            <li><a href="#hero" class="hover:text-gray-300 font-montserrat">Home</a></li>
+            <li><a href="#tentang" class="hover:text-gray-300 font-montserrat">Tentang MU Travel</a></li>
+            <li><a href="#paket" class="hover:text-gray-300 font-montserrat">Paket</a></li>
+            <li><a href="#dokumentasi" class="hover:text-gray-300 font-montserrat">Dokumentasi</a></li>
+            <li><a href="#testimoni" class="hover:text-gray-300 font-montserrat">Testimoni</a></li>
         </ul>
         
         <!-- Button Login -->
@@ -31,10 +32,11 @@
     
     <!-- Mobile Menu -->
     <div id="mobile-menu" class="hidden lg:hidden bg-black text-white px-5 py-4 space-y-2">
-        <a href="#" class="block hover:text-gray-300 font-montserrat">Home</a>
-        <a href="#" class="block hover:text-gray-300 font-montserrat">Tentang MU Travel</a>
-        <a href="#" class="block hover:text-gray-300 font-montserrat">Paket</a>
-        <a href="#" class="block hover:text-gray-300 font-montserrat">Dokumentasi</a>
+        <a href="#hero" class="block hover:text-gray-300 font-montserrat">Home</a>
+        <a href="#tentang" class="block hover:text-gray-300 font-montserrat">Tentang MU Travel</a>
+        <a href="#paket" class="block hover:text-gray-300 font-montserrat">Paket</a>
+        <a href="#dokumentasi" class="block hover:text-gray-300 font-montserrat">Dokumentasi</a>
+        <a href="#testimoni" class="block hover:text-gray-300 font-montserrat">Testimoni</a>
         <a href="{{ route('login') }}" class="block bg-gradient-to-r from-gradientStart to-gradientEnd text-black py-2 px-7 rounded-2xl text-center hover:bg-yellow-600 font-poppins font-semibold">Login</a>
     </div>
 </nav>

@@ -1,5 +1,5 @@
-<section class="py-16 bg-white">
-    <div class="container mx-auto">
+<section id="paket" class="py-16 bg-white">
+    <div class="container mx-auto flex flex-col md:flex-col items-center px-5 md:px-0">
         <!-- Section Title -->
         <div class="text-center mb-10">
             <h2 class="text-4xl font-bold text-black font-elmessiri">Jadwal Program Umroh</h2>
@@ -7,13 +7,13 @@
         </div>
 
         <!-- Card List -->
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             @foreach ($packages as $package)
                 <!-- Single Card -->
                 <div class="bg-white shadow-md rounded-lg overflow-hidden">
                     <img src="{{ asset('storage/' . $package->foto_paket) }}" 
                     alt="{{ $package->nama_paket }}" 
-                    class="w-full h-100 object-cover">
+                    class="w-full h-50 md:h-100 object-cover">
                     
                     <!-- Header -->
                     <div class="p-4">
