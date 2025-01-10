@@ -18,7 +18,9 @@
                     </a>
                 </div>
               <div class="mt-3 rounded-lg sm:mt-0 sm:ml-3">
-                <button class="items-center block px-5 lg:px-10 py-3.5 text-base font-medium text-center text-yellow-500 transition duration-500 ease-in-out transform border-2 border-white shadow-md rounded-xl focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-500">Liat Paket Umroh</button>
+                <a href="#paket">
+                  <button class="items-center block px-5 lg:px-10 py-3.5 text-base font-medium text-center text-yellow-500 transition duration-500 ease-in-out transform border-2 border-white shadow-md rounded-xl focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-500">Liat Paket Umroh</button>
+                </a>
               </div>
             </div>
           </div>

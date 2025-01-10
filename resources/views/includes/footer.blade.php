@@ -38,12 +38,16 @@
                     <span class="text-sm">0812-3455-0234</span>
                 </li>
                 <li class="flex items-center">
-                    <img src="/assets/images/wa-putih.png" alt="WhatsApp" class="h-5 mr-3">
-                    <span class="text-sm">0896-5263-3339</span>
+                    <img src="/assets/images/tiktok.png" alt="Tiktok" class="h-5 mr-3">
+                    <span class="text-sm">@tutusindarwati</span>
                 </li>
                 <li class="flex items-center">
                     <img src="/assets/images/ig-putih.png" alt="Instagram" class="h-5 mr-3">
-                    <span class="text-sm">@mutravel.official</span>
+                    <span class="text-sm">MU Travel Jember Kota</span>
+                </li>
+                <li class="flex items-center">
+                    <img src="/assets/images/facebook.png" alt="Facebook" class="h-5 mr-3">
+                    <span class="text-sm">Perindu Baitullah</span>
                 </li>
             </ul>
         </div>

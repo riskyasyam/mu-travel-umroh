@@ -47,6 +47,26 @@
     </div>
 
     <script>
+        function formatHarga(input) {
+            // Ambil hanya angka, hapus titik dan karakter non-digit
+            let value = input.value.replace(/\D/g, '');
+
+            // Konversi ke integer untuk menghindari angka nol di depan
+            let numericValue = parseInt(value, 10);
+
+            // Jika bukan angka, kosongkan input
+            if (isNaN(numericValue)) {
+                input.value = '';
+                document.getElementById('harga').value = '';
+                return;
+            }
+
+            // Format angka dengan titik pemisah ribuan
+            input.value = numericValue.toLocaleString('id-ID');
+
+            // Simpan angka tanpa titik ke hidden input untuk dikirim ke backend
+            document.getElementById('harga').value = numericValue;
+        }
         // Sidebar Toggle Script
         document.getElementById('toggleSidebar').addEventListener('click', () => {
             const sidebar = document.getElementById('sidebar');
